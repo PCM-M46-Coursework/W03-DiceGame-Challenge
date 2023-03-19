@@ -1,0 +1,13 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 3ch;
+}
+
+h2 {
+    margin: 0;
+}
+
+aside {
+    align-self: center;
+}

@@ -1,0 +1,18 @@
+#page-wrapper {
+    justify-content: space-evenly;
+}
+
+footer {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    gap: 3ch;
+}
+
+footer section {
+    width: 50%;
+}
+
+h2 {
+    margin: 0;
+}

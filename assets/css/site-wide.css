@@ -9,6 +9,7 @@ body {
     background-image: url(../img/bg.jpg);
     background-blend-mode:hard-light;
     animation: scrollBackground 20s linear infinite;
+    font-family:'Courier New', Courier, monospace;
 }
 
 @keyframes scrollBackground {
@@ -46,7 +47,6 @@ a {
     cursor: pointer;
     border: 2px solid var(--theme-colour);
 	background:linear-gradient(to bottom, #e8e0e0 5%, #c4c0c0 100%);
-    font-family:'Courier New', Courier, monospace;
     font-weight: bold;
     border-radius: 3px;
     box-shadow: 1px 1px 1px #000000;
@@ -79,6 +79,11 @@ a {
 }
 
 .btn-xsmall {
+    padding: 0.6rem 1.2rem;
+    font-size: 1.2rem;
+}
+
+.btn-xxsmall {
     padding: 0.5rem 1rem;
     font-size: 1rem;
 }

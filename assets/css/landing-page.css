@@ -1,0 +1,15 @@
+#page-wrapper footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 2ch;
+}
+
+#hybridSong {
+    background: var(--theme-bg-colour);
+    width: 80px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 1px var(--theme-bg-colour);
+}

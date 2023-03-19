@@ -1,0 +1,84 @@
+:root
+{
+    --theme-bg-colour: #b33951;
+    --theme-colour: #700f22;
+}
+
+body {
+    background-color: var(--theme-bg-colour);
+    background-image: url(../img/bg.jpg);
+    background-blend-mode:hard-light;
+    animation: scrollBackground 20s linear infinite;
+}
+
+@keyframes scrollBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+a {
+    text-decoration: none;
+    color: var(--theme-colour);
+}
+
+.container {
+    padding: 40px;
+    background: #dddddd;
+    border-radius: 30px;
+    box-shadow: 1px 1px 9px 2px inset #000000;
+}
+
+#page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 95vh;
+}
+
+.btn {
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid var(--theme-colour);
+	background:linear-gradient(to bottom, #e8e0e0 5%, #c4c0c0 100%);
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px #000000;
+    color: var(--theme-colour);
+}
+
+.btn:hover {
+	background:linear-gradient(to bottom, var(--theme-bg-colour) 5%, var(--theme-colour) 100%);
+    color: #f5f5f5;
+	background-color:var(--theme-colour);
+}
+
+.btn:active {
+    box-shadow: 1px 1px inset #000000;
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+}
+
+.btn-regular {
+    padding: 0.865rem 1.75rem;
+    font-size: 1.75rem;
+}
+
+.btn-small {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.5rem;
+}
+
+.btn-xsmall {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}

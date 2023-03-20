@@ -7,7 +7,7 @@
 body {
     background-color: var(--theme-bg-colour);
     background-image: url(../img/bg.jpg);
-    background-blend-mode:hard-light;
+    background-blend-mode: hard-light;
     animation: scrollBackground 20s linear infinite;
     font-family:'Courier New', Courier, monospace;
 }
@@ -21,9 +21,17 @@ body {
   }
 }
 
+[hidden] {
+    display: none!important;
+}
+
 a {
     text-decoration: none;
     color: var(--theme-colour);
+}
+
+button {
+    font-family:'Courier New', Courier, monospace;
 }
 
 .container {
@@ -86,4 +94,11 @@ a {
 .btn-xxsmall {
     padding: 0.5rem 1rem;
     font-size: 1rem;
+}
+
+#hybridSong {
+    background: var(--theme-bg-colour);
+    width: 80px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 1px var(--theme-bg-colour);
 }

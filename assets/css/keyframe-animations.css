@@ -1,0 +1,17 @@
+/*
+    This file contains a template of a keyframe animation.
+    The rotational values will be dynamically injected, via JavaScript.
+*/
+
+@keyframes roll
+{
+    from
+    {
+        transform: rotateX(0/* PLACEHOLDER */) rotateY(0/* PLACEHOLDER */);
+    }
+
+    to
+    {
+        transform: rotateX(0/* PLACEHOLDER */) rotateY(0/* PLACEHOLDER */);
+    }
+}

@@ -22,7 +22,15 @@
             <img src="./assets/img/logo.png" title="Dice Frenzy!" alt="Dice Frenzy!" />
         </header>
 
-        <main>
+        <section  id="panel-set-target" class="container panel">
+            <h3>You will have to beat a target number of:</h3>    
+            <p id="txtTargetNumber" class="announcement" contenteditable>20</p>
+            <button id="btnSetTarget" class="btn btn-xsmall">
+                Set Target
+            </button>
+        </section>
+
+        <main hidden>
 
             <!-- PANEL roll -->
             <section id="panel-roll" class="container">

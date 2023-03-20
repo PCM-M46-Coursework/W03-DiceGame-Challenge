@@ -6,14 +6,9 @@
  */
 Document.prototype.getStylesheet = function (fileName)
 {
-    // Get all the stylesheets in the document.
-    let stylesheets = this.styleSheets;
-
     // Loop through the stylesheets until you find the one you want.
-    for (let i = 0; i < stylesheets.length; i++)
+    for (const stylesheet of this.styleSheets)
     {
-        let stylesheet = stylesheets[i];
-
         // Check if the stylesheet has the desired name.
         if (!(stylesheet.href && stylesheet.href.includes(fileName))) continue;
         
@@ -24,3 +19,15 @@ Document.prototype.getStylesheet = function (fileName)
     // If we haven't found the stylesheet, return null.
     return null;
 };
+
+/**
+ * Programmatically set the value of a variable within CSS.
+ * 
+ * @param {String} variableName - If the name is not prepended with trailing hyphen, they will be added.
+ * @param {*} value - The value to set.
+ */
+Document.prototype.setCssVariable = function(variableName, value)
+{
+    if (!variableName.startsWith('--')) variableName = `--${variableName}`;
+    this.querySelector(':root').style.setProperty(variableName, value);
+}

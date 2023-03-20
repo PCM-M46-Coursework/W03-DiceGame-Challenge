@@ -1,0 +1,50 @@
+#page-wrapper {
+    justify-content: space-evenly;
+}
+
+main {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3ch;
+}
+
+main panel {
+    display: flex;
+    justify-content: center;
+    gap: 3ch;
+}
+
+h2 {
+    margin: 0;
+}
+
+
+#panel-target p {
+    text-align: center;
+}
+
+#panel-roll {
+    display: grid;
+    place-content: center;
+    column-count: 1;
+    row-gap: 2ch;
+}
+
+.panel {
+    display: grid;
+    place-content: center;
+    column-count: 2;
+    gap: 1ch;
+    text-align: center;
+    width: 20vw;
+}
+
+.targetScore,
+.container .announcement {
+    font-size: 4rem;
+    text-align: center;
+    margin: 1ch;
+    font-weight: 900;
+}

@@ -1,0 +1,133 @@
+:root {
+    --die-face-colour: linear-gradient(145deg, #dddbd8, #ffffff);
+    --die-border-colour: #f6f3f0;
+    --die-pip-colour: #000000;
+    --die-single-pip-colour: #ff0000;
+}
+
+/* ===============================================================
+    General Styles
+   =============================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================================================
+    Die Styles
+   =============================================================== */
+
+#die {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+    border: 5px solid var(--die-border-colour);
+    background: var(--die-face-colour);
+}
+
+.face::before {
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: var(--die-border-colour);
+    transform: translateZ(-1px);
+}
+
+.face::after {
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #131210;
+}
+
+.face-1 {
+    transform: translateZ(50px);
+}
+
+.face-6 {
+    transform: rotateX(180deg) translateZ(50px);
+}
+
+.face-2 {
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.face-5 {
+    transform: rotateX(-90deg) translateZ(50px);
+}
+
+.face-3 {
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+.face-4 {
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+/* ===============================================================
+    Dots Styles
+
+    DEBUG:
+
+    .die
+    {    
+        transform: rotateX(0deg)    rotateY(0deg);      /* 1 *//*
+        transform: rotateX(-90deg)  rotateY(0deg);      /* 2 *//*
+        transform: rotateX(0deg)    rotateY(-90deg);    /* 3 *//*
+        transform: rotateX(0deg)    rotateY(90deg);     /* 4 *//*
+        transform: rotateX(90deg)   rotateY(0deg);      /* 5 *//*
+        transform: rotateX(180deg)  rotateY(0deg);      /* 6 *//*
+    }
+
+   =============================================================== */
+
+.face-1::after {
+    width: 30px;
+    height: 30px;
+    background: var(--die-single-pip-colour);
+    margin: -15px 0 0 -15px;
+}
+
+.face-6::after {
+    margin: -34px 0 0 -32px;
+    box-shadow: 50px 0, 0 25px, 50px 25px, 0 50px, 50px 50px;
+}
+
+.face-2::after {
+    margin: -34px 0 0 -32px;
+    box-shadow: 50px 50px;
+}
+
+.face-5::after {
+    margin: -36px 0 0 -33px;
+    box-shadow: 26px 26px, 52px 52px, 0 52px, 52px 0;
+}
+
+.face-3::after {
+    margin: -36px 0 0 -33px;
+    box-shadow: 26px 26px, 52px 52px;
+}
+
+.face-4::after {
+    margin: -35px 0 0 -35px;
+    box-shadow: 52px 52px, 0 52px, 52px 0;
+}

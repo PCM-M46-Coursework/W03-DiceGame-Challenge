@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Game • Dice Frenzy!</title>
+    <!-- Site Styles -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/site-wide.css">
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="./assets/css/keyframe-animations.css">
+    <link rel="stylesheet" href="./assets/css/die.css">
+    <link rel="stylesheet" href="./assets/css/solo-game.css">
+</head>
+<body>
+    <div id="page-wrapper">
+        <!-- BEGIN Page Content -->
+
+        <header class="container">
+            <img src="./assets/img/logo.png" title="Dice Frenzy!" alt="Dice Frenzy!" />
+        </header>
+
+        <main>
+
+            <!-- PANEL roll -->
+            <section id="panel-roll" class="container">
+                <div id="die">
+                    <div class="face face-1"></div>
+                    <div class="face face-6"></div>
+                    <div class="face face-2"></div>
+                    <div class="face face-5"></div>
+                    <div class="face face-3"></div>
+                    <div class="face face-4"></div>
+                </div>
+                <button id="btnRoll" class="btn btn-xxsmall">
+                    Roll Die
+                </button>
+            </section>
+
+            <!-- PANEL score -->
+            <section id="panel-score" class="container">    
+                <p>Current Score:</p>    
+                <p id="txtCurrentScore" class="announcement">0</p>
+            </section>
+
+            <!-- PANEL streak -->
+            <section id="panel-streak" class="container">    
+                <p>Win Streak:</p>    
+                <p id="txtCurrentStreak" class="announcement">0</p>
+            </section>
+
+            <!-- PANEL end -->
+            <section id="panel-end" class="container" hidden>
+                <p class="announcement"></p>
+                <button id="btnNewGame" class="btn btn-regular">
+                    New Game
+                </button>
+                <button id="btnBack" class="btn btn-regular">
+                    Back to Menu
+                </button>
+            </section>
+
+        </main>
+        <aside>
+            <audio id="hybridSong" preload loop controls>
+                <source src="./assets/audio/hybrid-song.ogg" />
+            </audio>
+        </aside>
+        <script type="module" src="./assets/js/solo-game.js"></script>
+
+        <!-- END Page Content -->
+    </div>
+</body>
+</html>

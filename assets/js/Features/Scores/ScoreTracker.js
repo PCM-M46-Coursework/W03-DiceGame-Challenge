@@ -14,10 +14,10 @@ export class ScoreTracker
     #_sections = document.querySelectorAll('main section');
     #_elEndGame = document.querySelector('#panel-end > p');
 
-    constructor(targetScore)
+    constructor()
     {
-        this.#_targetScore = targetScore ?? 20;
-        
+        this.#_setTarget();
+
         const buttons = {
             newGame: document.querySelector('#btnNewGame'),
             endGame: document.querySelector('#btnBack'),
@@ -27,11 +27,25 @@ export class ScoreTracker
             this.#_sections.forEach(e => e.toggleDisplay());
             document.querySelector('#txtCurrentScore').innerHTML = "0";
             document.querySelector('#txtCurrentStreak').innerHTML = this.#_currentStreak;
+            this.#_setTarget();
         });
         
         buttons['endGame'].addEventListener('click', () => {
             window.location.href = "./";
         });
+    }
+
+    #_setTarget()
+    {
+        document.querySelector('#panel-set-target').show();       
+        document.querySelector('main').hide();
+        document.querySelector('#txtTargetNumber').innerHTML = this.#_targetScore ?? 20;
+        document.querySelector('#btnSetTarget').addEventListener('click', () => {
+            const targetScore = parseInt(document.querySelector('#txtTargetNumber').innerText);
+            this.#_targetScore = targetScore ?? 20;
+            document.querySelector('#panel-set-target').hide();       
+            document.querySelector('main').show();
+        }, { once: true });
     }
 
     processResult(roll)

@@ -43,10 +43,11 @@ button {
 
 #page-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     justify-content: space-around;
     align-items: center;
-    height: 95vh;
+    gap: 2ch;
+    min-height: 95vh;
 }
 
 .btn {
@@ -101,4 +102,8 @@ button {
     width: 80px;
     border-radius: 10px;
     box-shadow: 0 0 3px 1px var(--theme-bg-colour);
+}
+
+header img {
+    max-width: 70vw;
 }

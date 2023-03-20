@@ -5,7 +5,7 @@
 main {
     width: 80vw;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
     gap: 3ch;
 }
@@ -21,6 +21,7 @@ h2 {
     row-gap: 3ch;
 }
 
+#panel-set-target,
 #panel-score {
     display: grid;
     place-content: center;

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Game • Dice Frenzy!</title>
+    <!-- Site Styles -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/site-wide.css">
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="./assets/css/keyframe-animations.css">
+    <link rel="stylesheet" href="./assets/css/die.css">
+    <link rel="stylesheet" href="./assets/css/deathmatch.css">
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <!-- BEGIN Page Content -->
+
+        <header class="container">
+            <img src="./assets/img/logo.png" title="Dice Frenzy!" alt="Dice Frenzy!" />
+        </header>
+        <main>
+
+            <panel id="pnlDieRoll">
+                <!-- PANEL roll -->
+                <section id="panel-roll" class="container">
+                    <div id="die">
+                        <div class="face face-1"></div>
+                        <div class="face face-6"></div>
+                        <div class="face face-2"></div>
+                        <div class="face face-5"></div>
+                        <div class="face face-3"></div>
+                        <div class="face face-4"></div>
+                    </div>
+                    <button id="btnRoll" class="btn btn-xxsmall">
+                        Roll Die
+                    </button>
+                </section>
+            </panel>
+
+            <panel id="pnlSetScore">
+                <!-- PANEL score -->
+                <section id="panel-score" class="container panel">
+                    <p><span class="playerName"></span> - Set a Target Score:</p>
+                    <p class="currentScore announcement">0</p>
+                    <button id="btnHold" class="btn btn-xsmall">
+                        Hold
+                    </button>
+                </section>
+            </panel>
+
+            <panel id="pnlHoldScore" hidden>
+                <section id="panel-hold" class="container panel">                    
+                    <h2><span class="playerName"></span></h2>
+                    <p>You will now have to beat a target score of:</p>
+                    <p class="targetScore"></p>
+                    <button id="btnContinueToReach" class="btn btn-xxsmall">
+                        Continue
+                    </button>
+                </section>
+            </panel>
+
+            <panel id="pnlReachScore" hidden>
+                <section id="panel-reach" class="container panel">
+                    <p><span class="playerName"></span> - Current Score:</p>
+                    <p class="currentScore announcement">0</p>
+                </section>
+                <section id="panel-target" class="container">
+                    <p><strong>Target Score</strong></p>
+                    <p class="targetScore">0</p>
+                </section>
+            </panel>
+
+            <panel id="pnlEndGame" hidden>
+                <!-- PANEL end -->
+                <section id="panel-end" class="container">
+                    <p class="announcement"></p>
+                    <button id="btnNewGame" class="btn btn-regular">
+                        New Game
+                    </button>
+                    <button id="btnBack" class="btn btn-regular">
+                        Back to Menu
+                    </button>
+                </section>
+            </panel>
+
+        </main>
+
+        <aside>
+            <audio id="hybridSong" preload loop controls>
+                <source src="./assets/audio/hybrid-song.ogg" />
+            </audio>
+        </aside>
+        <script type="module" src="./assets/js/deathmatch.js"></script>
+
+        <!-- END Page Content -->
+    </div>
+</body>
+
+</html>

@@ -20,8 +20,12 @@ h2 {
     margin: 0;
 }
 
+#panel-end {
+    text-align: center;
+}
 
-#panel-target p {
+#panel-target {
+    width: unset;
     text-align: center;
 }
 
@@ -29,7 +33,7 @@ h2 {
     display: grid;
     place-content: center;
     column-count: 1;
-    row-gap: 2ch;
+    row-gap: 5ch;
 }
 
 .panel {

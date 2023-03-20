@@ -120,6 +120,7 @@ function onWinGame()
     elEndGame.innerHTML = `${player.title} Wins!`;
     winner = true;
     currentState = states.end;
+    refreshDisplay();
 }
 
 function onLoseGame()
@@ -129,6 +130,7 @@ function onLoseGame()
     elEndGame.innerHTML = `${player.title} Loses!`;
     winner = false;
     currentState = states.end;
+    refreshDisplay();
 }
 
 // ======================================================================
@@ -145,12 +147,12 @@ function processResult(roll)
     }
 
     currentScore += roll;
+    refreshDisplay();
 
     if (currentState.name === 'reach' && currentScore > targetScore) {
         onWinGame();
     }
 
-    refreshDisplay();
 }
 
 buttons.roll.addEventListener('click', function()
